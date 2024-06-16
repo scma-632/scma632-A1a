@@ -115,7 +115,7 @@ mean_rural <- mean(rural$total_consumption)
 mean_urban <- mean(urban$total_consumption)
 
 # Perform z-test
-z_test_result <- z.test(mean_rural, mean_urban, alternative = "two.sided", mu = 0, sigma.x = 2.56, sigma.y = 2.34, conf.level = 0.95)
+z_test_result <- z.test(rural, urban, alternative = "two.sided", mu = 0, sigma.x = 2.56, sigma.y = 2.34, conf.level = 0.95)
 
 # Generate output based on p-value
 if (z_test_result$p.value < 0.05) {
